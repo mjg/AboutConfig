@@ -1,0 +1,7 @@
+#AboutConfigButton {
+  list-style-image: url("chrome://aboutconfig/skin/aboutconfig24.png");
+}
+
+toolbar[iconsize="small"] #AboutConfigButton {
+  list-style-image: url("chrome://aboutconfig/skin/aboutconfig16.png");
+}
