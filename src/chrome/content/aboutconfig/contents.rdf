@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+
+  <rdf:Seq about="urn:mozilla:package:root">
+    <rdf:li resource="urn:mozilla:package:aboutconfig"/>
+  </rdf:Seq>
+
+  <rdf:Description about="urn:mozilla:package:aboutconfig"
+    chrome:displayName="AboutConfig"
+    chrome:author="Michael J Gruber"
+    chrome:authorURL="http://aboutconfig.mozdev.org"
+    chrome:name="aboutconfig"
+    chrome:description="about:config"
+    chrome:extension="true">
+  </rdf:Description>
+
+  <rdf:Seq about="urn:mozilla:overlays">
+   <rdf:li resource="chrome://global/content/globalOverlay.xul"/>
+   <rdf:li resource="chrome://messenger/content/messengercompose/messengercompose.xul"/>
+  </rdf:Seq>
+  <rdf:Seq about="chrome://global/content/globalOverlay.xul">
+    <rdf:li>chrome://aboutconfig/content/overlay.xul</rdf:li>
+  </rdf:Seq>
+  <rdf:Seq about="chrome://messenger/content/messengercompose/messengercompose.xul">
+    <rdf:li>chrome://aboutconfig/content/overlay.xul</rdf:li>
+  </rdf:Seq>
+
+</rdf:RDF>
