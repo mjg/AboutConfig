@@ -5,6 +5,7 @@
 <!DOCTYPE window SYSTEM "chrome://global/locale/config.dtd">
 
 <window id="config"
+	windowtype="global:aboutconfig"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
         width="750"
         height="500"
