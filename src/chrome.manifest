@@ -1,0 +1,11 @@
+content aboutconfig jar:chrome/aboutconfig.jar!/content/aboutconfig/
+skin aboutconfig classic/1.0 jar:chrome/aboutconfig.jar!/skin/classic/aboutconfig/
+
+overlay chrome://global/content/globalOverlay.xul chrome://aboutconfig/content/overlay-ng.xul
+overlay chrome://messenger/content/messengercompose/messengercompose.xul chrome://aboutconfig/content/overlay-ng.xul
+
+style chrome://messenger/content/messenger.xul chrome://aboutconfig/skin/aboutconfig.css
+style chrome://messenger/content/messageWindow.xul chrome://aboutconfig/skin/aboutconfig.css
+style chrome://messenger/content/messengercompose/messengercompose.xul chrome://aboutconfig/skin/aboutconfig.css
+style chrome://global/content/customizeToolbar.xul chrome://aboutconfig/skin/aboutconfig.css
+

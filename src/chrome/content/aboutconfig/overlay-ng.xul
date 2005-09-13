@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://global/locale/config.dtd">
+
+<overlay id="aboutconfigOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  
+
+
+<menupopup id="taskPopup">
+  <menuitem id="aboutconfig" command="cmd_aboutconfig" insertafter="javaScriptConsole"/>
+</menupopup>
+
+<toolbarpalette id="MailToolbarPalette">
+  <toolbarbutton
+    class="toolbarbutton-1"
+    id="AboutConfigButton"
+    label="about:config"
+    tooltiptext="about:config"
+    oncommand='openDialog("chrome://global/content/config.xul","about:config","dialog=no");' />
+</toolbarpalette>
+
+<toolbarpalette id="MsgComposeToolbarPalette">
+  <toolbarbutton
+    class="toolbarbutton-1"
+    id="AboutConfigButton"
+    label="about:config"
+    tooltiptext="about:config"
+    oncommand='openDialog("chrome://global/content/config.xul","about:config","dialog=no");' />
+</toolbarpalette>
+
+<commandset id="mainCommandSet">
+ <command id="cmd_aboutconfig" label="about:config"
+   oncommand='openDialog("chrome://global/content/config.xul","about:config","dialog=no");'/>
+</commandset>
+<commandset id="editMenuCommands"><commandset id="mainCommandSet"/></commandset>
+<commandset id="composeCommands"><commandset id="mainCommandSet"/></commandset>
+<commandset id="tasksCommands"><commandset id="mainCommandSet"/></commandset>
+ 
+</overlay>
