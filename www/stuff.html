@@ -22,7 +22,7 @@ google_ad_channel ="9529252866";
 <P>This page collects assorted mozilla related that needs a place online.
 
 <h6>Styling microsummaries</h6>
-<P> <img src="tinderbox.png" alt="screenshot" align=right hspace=10> By styling <a href="http://wiki.mozilla.org/Microsummaries">microsummaries</a>
+<P> <img src="tinderbox.png" alt="screenshot" align=left hspace=10> By styling <a href="http://wiki.mozilla.org/Microsummaries">microsummaries</a>
 according to their changing content it is possible to replace several status reporting extensions
 and to save statusbar real estate. Creating those microsummaries yourself is much easier than developping extensions.
 As an example, let's see how one creates a microsummary replacement for the <a href="https://addons.mozilla.org/firefox/832/">tinderstatus extension</a>.
@@ -35,11 +35,11 @@ for information about generators. You can either <a href="mozilla-tinderbox-micr
 tinderbox status pages or <button onclick="window.sidebar.addMicrosummaryGenerator('mozilla-tinderbox-microsummary.xml')">install</button> it directly from here.
 
 <P>
-Next, create a <code>Tinderbox</code> folder in your personal bookmarks toolbar and add bookmarks to your favourite tinderboxens, using the microsummaries.
+Next, create a <code>Tinderbox</code> folder in your personal bookmarks toolbar and add bookmarks for your favourite tinderboxens, using the microsummaries.
 
 <P>
 Finally, style the contents of the <code>Tinderbox</code> folder by putting something like the following CSS in <code>userChrome.css</code> in
-yoour profile's <code>chrome</code> folder:
+your profile's <code>chrome</code> folder:
 
 <br clear=all>
 
@@ -71,13 +71,13 @@ toolbarbutton.bookmark-item[label="Tinderbox"] .menu-iconic-icon {
 
 </pre></code>
 
-The two images for open <img src="tree-open.png" alt="tree open"> and closed  <img src="tree-close.png" alt="tree closed"> tree state are taken from <a href="https://addons.mozilla.org/firefox/832/">tinderstatus extension</a>.
+The two images for open <img src="tree-open.png" alt="tree open"> and closed  <img src="tree-closed.png" alt="tree closed"> tree state are taken from the <a href="https://addons.mozilla.org/firefox/832/">tinderstatus extension</a> and they need to go into your profile's <code>chrome</code> folder as well.
 
 <P>A few things to note:
 <ul>
 <li> All the CSS above applies only to entries within the <code>Tinderbox</code> folder in your personal bookmarks toolbar. It does not apply to the entries in the bookmarks menu (intentionally), but it's easy to change this.
 <li> You see how the label of the microsummary bookmark menutitem is used to generate different markup depending on the state (content) of the bookmark.
-<li> Also note how the favicon is made invisible by hidding the <code>.menu-iconic-icon</code> so that the background images for <code>.menu-iconic-left</code> is shown.
+<li> Also note how the favicon is made invisible by hidding the <code>.menu-iconic-icon</code> so that the background image for <code>.menu-iconic-left</code> is shown. I cannot ovverride the favicon directly because an XBL binding is involved (maybe someone else can...). 
 <li> Similarly one could change the text or background colour of the bookmark text by styling the <code>label</code> child of <code>menuitem</code>.
 <li> Disclaimer: In fact I like the very fine <a href="https://addons.mozilla.org/firefox/832/">tinderstatus extension</a>. 
 Fortunately, its author is also &quot;the microsummary guy&quot; so replacing his extension by microsummaries should be OK :).
