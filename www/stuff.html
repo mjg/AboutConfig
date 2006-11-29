@@ -19,7 +19,7 @@ google_ad_channel ="9529252866";
 <!-- MAIN CONTENT -->
 <h5 class="page-header"><a id="content" name="content">Stuff</a></h5>
 
-<P>This page collects assorted mozilla related that needs a place online.
+<P>This page collects assorted mozilla related stuff that needs a place online.
 
 <h6>Styling microsummaries</h6>
 <P> <img src="tinderbox.png" alt="screenshot" align=left hspace=10> By styling <a href="http://wiki.mozilla.org/Microsummaries">microsummaries</a>
@@ -28,7 +28,7 @@ and to save statusbar real estate. Creating those microsummaries yourself is muc
 As an example, let's see how one creates a microsummary replacement for the <a href="https://addons.mozilla.org/firefox/832/">tinderstatus extension</a>.
 
 <P>
-First, if the web site in question (<code>http://tinderbox.mozilla.org/showbuilds.cgi?</code>) does not provide any microsummary
+First, if the web site in question (in our case <code>http://tinderbox.mozilla.org/showbuilds.cgi?</code>) does not provide any microsummary
 we need to find or write a generator. <a href="http://dietrich.ganx4.com/blog/?p=237">The one I found</a> had problems parsing some of the tinderbox pages
 and did not quite follow the suggested format but it got me started. See the <a href="http://wiki.mozilla.org/Microsummaries">microsummary wiki</a>
 for information about generators. You can either <a href="mozilla-tinderbox-microsummary.xml">download</a> my microsummary generator for 
@@ -41,7 +41,7 @@ Next, create a <code>Tinderbox</code> folder in your personal bookmarks toolbar 
 Finally, style the contents of the <code>Tinderbox</code> folder by putting something like the following CSS in <code>userChrome.css</code> in
 your profile's <code>chrome</code> folder:
 
-<br clear=all>
+<br clear=left>
 
 <code><pre>
 /* Color microsummaries for tinderbox */
