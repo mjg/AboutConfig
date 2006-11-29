@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator xmlns="http://www.mozilla.org/microsummaries/0.1" name="Mozilla Tinderbox Microsummary">
+   <pages>
+     <include>^http://tinderbox\.mozilla\.org/showbuilds\.cgi.*</include>
+   </pages>
+   <template>
+    <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="text"/>
+    <xsl:template match="/">
+      <!-- get tree name -->
+      <xsl:variable name="treeName" select="substring-after(substring-before(/html/body/table[2]/tbody/tr/td[1]/table/tbody/tr[2]/td/b,' ('),':')"/>
+      <xsl:value-of select="$treeName"/> <xsl:text>: </xsl:text>
+
+      <!-- get open/closed -->
+      <xsl:value-of select="/html/body//a[@name='open']/following::font[1]"/> <xsl:text> (</xsl:text>
+        <!-- get burning-ness -->
+        <xsl:variable name="numBurning" select="count(//a[@title='burning'])"/>
+        <xsl:variable name="numOrange" select="count(/html/body/table/tbody/tr[1]/td[@bgcolor='#ffaa00'])"/>
+        <xsl:choose>
+          <xsl:when test="$numBurning &gt; 0"><xsl:value-of select="$numBurning"/> burning (<xsl:for-each select="//a[@title='burning']"><xsl:value-of select="."/>, </xsl:for-each>)</xsl:when>
+          <xsl:when test="$numOrange &gt; 0"><xsl:value-of select="$numOrange"/> orange</xsl:when>
+          <xsl:otherwise><xsl:text>OK</xsl:text></xsl:otherwise>
+        </xsl:choose>
+      <xsl:text>)</xsl:text>
+    </xsl:template>
+    </xsl:transform>
+   </template>
+ </generator>
