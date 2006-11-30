@@ -17,7 +17,7 @@
         <xsl:variable name="numBurning" select="count(//a[@title='burning'])"/>
         <xsl:variable name="numOrange" select="count(/html/body/table/tbody/tr[1]/td[@bgcolor='#ffaa00'])"/>
         <xsl:choose>
-          <xsl:when test="$numBurning &gt; 0"><xsl:value-of select="$numBurning"/> burning (<xsl:for-each select="//a[@title='burning']"><xsl:value-of select="."/>, </xsl:for-each>)</xsl:when>
+          <xsl:when test="$numBurning &gt; 0"><xsl:value-of select="$numBurning"/> burning (<xsl:for-each select="//a[@title='burning']"><xsl:value-of select="./font"/>, </xsl:for-each>)</xsl:when>
           <xsl:when test="$numOrange &gt; 0"><xsl:value-of select="$numOrange"/> orange</xsl:when>
           <xsl:otherwise><xsl:text>OK</xsl:text></xsl:otherwise>
         </xsl:choose>
