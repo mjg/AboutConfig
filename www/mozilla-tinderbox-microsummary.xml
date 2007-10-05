@@ -8,7 +8,7 @@
     <xsl:output method="text"/>
     <xsl:template match="/">
       <!-- get tree name -->
-      <xsl:variable name="treeName" select="substring-after(substring-before(/html/body/table[2]/tbody/tr/td[1]/table/tbody/tr[2]/td/b,' ('),':')"/>
+      <xsl:variable name="treeName" select="substring-after(substring-before(/html/body/table[1]/tbody/tr/td[1]/table/tbody/tr[2]/td/b,' ('),':')"/>
       <xsl:value-of select="$treeName"/> <xsl:text>: </xsl:text>
 
       <!-- get open/closed -->
