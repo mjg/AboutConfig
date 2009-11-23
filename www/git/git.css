@@ -1,3 +1,6 @@
+#mozdev-logo, #mozdev-date, #mozdev-navigation, #mozdev-fluff, #mozdev-fluff2, #content, #project-navigation, #mozdev-feedback {
+	display: none;
+}
 html, body {
 	margin:0; padding:0; height:100%;
 }
