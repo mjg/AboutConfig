@@ -27,7 +27,7 @@
     <em:file>
       <Description about="urn:mozilla:extension:file:aboutconfig.jar">
         <em:package>content/aboutconfig/</em:package>
-        <em:skin>skin/classic/aboutconfig/</em:skin> --&gt;
+        <em:skin>skin/classic/aboutconfig/</em:skin>
       </Description>
     </em:file>
   </Description>      
